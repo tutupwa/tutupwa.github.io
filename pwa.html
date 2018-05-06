@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TUTU's Travel</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="manifest" href="manifest.json">
+		<link rel="icon" sizes="192x192" href="icon.png">
+		<link rel="mobile-touch-icon" sizes="192x192" href="icon.png">
+		<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<meta name="msapplication-TileImage" content="icon.png">
+		<meta name="msapplication-TileColor" content="#2F3BA2">
+		<script type = "text/javascript">
+		$(document).ready(function(){
+			$(".Taiwanimg").hide();
+			$(".Japanimg").hide();
+			$(".Koeraimg").hide();
+			$(".HongKongimg").hide();
+			$("#Country").change(function(){
+				var checkValue=$("#Country").val();
+				if(checkValue == 0)
+				{
+					$(".Taiwanimg").hide();
+					$(".Japanimg").hide();
+					$(".Koeraimg").hide();
+					$(".HongKongimg").hide();
+				}
+				if(checkValue == 1)
+				{
+					$(".Taiwanimg").slideToggle("slow");
+					$(".Japanimg").hide();
+					$(".Koeraimg").hide();
+					$(".HongKongimg").hide();
+					checkValue=$("#Country").val();
+				}
+				if(checkValue == 2)
+				{
+					$(".Japanimg").slideToggle("slow");
+					$(".Taiwanimg").hide();
+					$(".Koeraimg").hide();
+					$(".HongKongimg").hide();
+					checkValue=$("#Country").val();
+				}
+				if(checkValue == 3)
+				{
+					$(".Koeraimg").slideToggle("slow");
+					$(".Taiwanimg").hide();
+					$(".Japanimg").hide();
+					$(".HongKongimg").hide();
+					checkValue=$("#Country").val();
+				}
+				if(checkValue == 4)
+				{
+					$(".HongKongimg").slideToggle("slow");
+					$(".Taiwanimg").hide();
+					$(".Japanimg").hide();
+					$(".Koeraimg").hide();
+					checkValue=$("#Country").val();
+				}
+			});
+		});
+		</script>
+		<style>
+			h1{
+				font-family: Monospace;
+				margin-left: 150px;
+				font-size: 40px;
+			}
+		body{
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+			background-repeat = "no-repeat"
+		}
+		form{
+			margin-left: 150px;
+		}
+		.Taiwanimg{
+			width: 500px;
+			margin-left: 300px;
+			margin-right: 60px;
+			margin-top: 50px;
+
+		}
+		.Japanimg{
+			width: 500px;
+			margin-left: 300px;
+			margin-right: 60px;
+			margin-top: 50px;
+
+		}
+		.Koeraimg{
+			width: 500px;
+			margin-left: 300px;
+			margin-right: 60px;
+			margin-top: 50px;
+
+		}
+		.HongKongimg{
+			width: 500px;
+			margin-left: 300px;
+			margin-right: 60px;
+			margin-top: 50px;
+
+		}
+		</style>
+	</head>
+	<body background-repeat = "no-repeat" background = "1.jpg">
+
+		<h1>Select which country's photo you want to look!!</h1>
+		
+		<form>
+			<select id="Country">
+				<option value="0" selected="selected">Choose Country</option> 
+				<option value="1">Taiwan</option>
+				<option value="2">Japan</option>
+				<option value="3">Koera</option>
+				<option value="4">HongKong</option>
+			</select>
+		</form>
+		<div>
+			<img class = " Taiwanimg animated rubberBand" src = "T1.jpg"alt = "Taiwan" align = "Center">
+			<img class = " Taiwanimg animated rubberBand" src = "T2.jpg"alt = "Taiwan" align = "Center">
+			<img class = " Taiwanimg animated rubberBand" src = "T3.jpg"alt = "Taiwan" align = "Center">
+		</div>
+		<div>
+			<img class = " Japanimg animated rubberBand" src = "J1.jpg"alt = "Japan" align = "Center">
+			<img class = " Japanimg animated rubberBand" src = "J2.jpg"alt = "Japan" align = "Center">
+			<img class = " Japanimg animated rubberBand" src = "J3.jpg"alt = "Japan" align = "Center">
+		</div>
+		<div>
+			<img class = " Koeraimg animated rubberBand" src = "K1.jpg"alt = "Koera" align = "Center">
+			<img class = " Koeraimg animated rubberBand" src = "K2.jpg"alt = "Koera" align = "Center">
+			<img class = " Koeraimg animated rubberBand" src = "K3.jpg"alt = "Koera" align = "Center">
+		</div>
+		<div>
+			<img class = " HongKongimg animated rubberBand" src = "h1.jpg"alt = "HongKong" align = "Center">
+			<img class = " HongKongimg animated rubberBand" src = "h2.jpg"alt = "HongKong" align = "Center">
+			<img class = " HongKongimg animated rubberBand" src = "h3.jpg"alt = "HongKong" align = "Center">
+		</div>
+	</body>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyCei_pLTaa_SwRix3OBVTSrfDAlNXgtx_s",
+			authDomain: "test-8a3db.firebaseapp.com",
+			databaseURL: "https://test-8a3db.firebaseio.com",
+			projectId: "test-8a3db",
+			storageBucket: "test-8a3db.appspot.com",
+			messagingSenderId: "539405918076"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+	<script src="scripts/app.js" async></script>
+</html>
