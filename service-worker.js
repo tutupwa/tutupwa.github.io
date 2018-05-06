@@ -16,6 +16,7 @@ var filesToCache = [
   '/h1.jpg',
   '/h2.jpg',
   '/h3.jpg',
+  '/1.jpg',
   '/icon.png',
 ];
 
