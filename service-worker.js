@@ -1,37 +1,22 @@
-// Copyright 2016 Google Inc.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//      http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 var dataCacheName = 'weatherData-v1';
 var cacheName = 'weatherPWA-final-1';
 var filesToCache = [
   '/',
   '/index.html',
-  '/tutupwa.github.io/app.js',
-  '/styles/inline.css',
-  '/tutupwa.github.io/T1.jpg',
-  '/tutupwa.github.io/T2.jpg',
-  '/tutupwa.github.io/T3.jpg',
-  '/tutupwa.github.io/J1.jpg',
-  '/tutupwa.github.io/J2.jpg',
-  '/tutupwa.github.io/J3.jpg',
-  '/tutupwa.github.io/K1.JPG',
-  '/tutupwa.github.io/K2.JPG',
-  '/tutupwa.github.io/K3.JPG',
-  '/tutupwa.github.io/h1.jpg',
-  '/tutupwa.github.io/h2.jpg',
-  '/tutupwa.github.io/h3.jpg',
-  '/tutupwa.github.io/icon.png',
+  '/app.js',
+  '/T1.jpg',
+  '/T2.jpg',
+  '/T3.jpg',
+  '/J1.jpg',
+  '/J2.jpg',
+  '/J3.jpg',
+  '/K1.JPG',
+  '/K2.JPG',
+  '/K3.JPG',
+  '/h1.jpg',
+  '/h2.jpg',
+  '/h3.jpg',
+  '/icon.png',
 ];
 
 self.addEventListener('install', function(e) {
