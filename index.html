@@ -25,6 +25,7 @@
 			$(".Japanimg").hide();
 			$(".Koeraimg").hide();
 			$(".HongKongimg").hide();
+			$("#map").hide();
 			$("#Country").change(function(){
 				var checkValue=$("#Country").val();
 				if(checkValue == 0)
@@ -33,6 +34,7 @@
 					$(".Japanimg").hide();
 					$(".Koeraimg").hide();
 					$(".HongKongimg").hide();
+					$("#map").hide();
 				}
 				if(checkValue == 1)
 				{
@@ -40,6 +42,7 @@
 					$(".Japanimg").hide();
 					$(".Koeraimg").hide();
 					$(".HongKongimg").hide();
+					$("#map").hide();
 					checkValue=$("#Country").val();
 				}
 				if(checkValue == 2)
@@ -48,6 +51,7 @@
 					$(".Taiwanimg").hide();
 					$(".Koeraimg").hide();
 					$(".HongKongimg").hide();
+					$("#map").hide();
 					checkValue=$("#Country").val();
 				}
 				if(checkValue == 3)
@@ -56,9 +60,19 @@
 					$(".Taiwanimg").hide();
 					$(".Japanimg").hide();
 					$(".HongKongimg").hide();
+					$("#map").hide();
 					checkValue=$("#Country").val();
 				}
 				if(checkValue == 4)
+				{
+					$(".HongKongimg").slideToggle("slow");
+					$(".Taiwanimg").hide();
+					$(".Japanimg").hide();
+					$(".Koeraimg").hide();
+					$("#map").hide();
+					checkValue=$("#Country").val();
+				}
+				if(checkValue == 5)
 				{
 					$(".HongKongimg").slideToggle("slow");
 					$(".Taiwanimg").hide();
@@ -125,6 +139,7 @@
 				<option value="2">Japan</option>
 				<option value="3">Koera</option>
 				<option value="4">HongKong</option>
+				<option value="5">Google Map</option>
 			</select>
 		</form>
 		<div>
